@@ -1,4 +1,5 @@
-headerdoc2html -j -o mTapToCall/Documentation mTapToCall/mTapToCall.h     
+headerdoc2html -j -o mTapToCall/Documentation mTapToCall/mTapToCall.h
+headerdoc2html -j -o mTapToCall/Documentation mTapToCall/phonecaller.h
 
 
 gatherheaderdoc mTapToCall/Documentation
