@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37B571851B95E4FB00D85CC3 /* phonecaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B571841B95E4FB00D85CC3 /* phonecaller.m */; settings = {ASSET_TAGS = (); }; };
 		599425AD16808409006628E6 /* mTapToCall.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 599425AC16808409006628E6 /* mTapToCall.h */; };
 		599425AF16808409006628E6 /* mTapToCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 599425AE16808409006628E6 /* mTapToCall.m */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37B571831B95E4FB00D85CC3 /* phonecaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phonecaller.h; sourceTree = "<group>"; };
+		37B571841B95E4FB00D85CC3 /* phonecaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = phonecaller.m; sourceTree = "<group>"; };
 		599425A416808409006628E6 /* libmTapToCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmTapToCall.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		599425AB16808409006628E6 /* mTapToCall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mTapToCall-Prefix.pch"; sourceTree = "<group>"; };
 		599425AC16808409006628E6 /* mTapToCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mTapToCall.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 			children = (
 				599425AC16808409006628E6 /* mTapToCall.h */,
 				599425AE16808409006628E6 /* mTapToCall.m */,
+				37B571831B95E4FB00D85CC3 /* phonecaller.h */,
+				37B571841B95E4FB00D85CC3 /* phonecaller.m */,
 				599425AA16808409006628E6 /* Supporting Files */,
 			);
 			path = mTapToCall;
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				599425AF16808409006628E6 /* mTapToCall.m in Sources */,
+				37B571851B95E4FB00D85CC3 /* phonecaller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +216,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "../../libs/nrGridView ../../libs/tbxml/tbxml-headers/ ../../Classes/network ../../Classes/common ../../libs/Facebook/ ../../libs/Twitter+OAuth/SAOAuthTwitterEngine ../../libs/JSON ../../Classes/customControls";
+				USER_HEADER_SEARCH_PATHS = "../../libs/TBXML/TBXML-Headers/";
 				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Debug;
@@ -225,7 +231,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "../../libs/nrGridView ../../libs/tbxml/tbxml-headers/ ../../Classes/network ../../Classes/common ../../libs/Facebook/ ../../libs/Twitter+OAuth/SAOAuthTwitterEngine ../../libs/JSON ../../Classes/customControls";
+				USER_HEADER_SEARCH_PATHS = "../../libs/TBXML/TBXML-Headers/";
 				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Release;

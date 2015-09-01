@@ -11,7 +11,6 @@
 
 #import "mTapToCall.h"
 #import "TBXML.h"
-#import "notifications.h"
 #import "phonecaller.h"
 
 
@@ -116,7 +115,6 @@
 }
 
 /**
- *  Crutch for supporting scenarios.
  *  This does not necessarily call module (i.e. adding viewController to stack may not happen).
  *  For example, if there is a call third-party application, the method returns a pointer to an object of type NSObject.
  *  Otherwise - the caller makes adding view controller in the stack.
