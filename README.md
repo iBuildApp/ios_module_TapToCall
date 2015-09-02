@@ -1,4 +1,4 @@
-# ios_module_TapToCall
+# iOS module TapToCall
 Tap to Call module allows users to make calls on predefined phone number.
 
 **XML Structure declaration**
