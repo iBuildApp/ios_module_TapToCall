@@ -11,6 +11,7 @@
 
 #import "mTapToCall.h"
 #import "TBXML.h"
+#import "notifications.h"
 #import "phonecaller.h"
 
 
@@ -31,11 +32,6 @@
  */
 @property (nonatomic, copy  ) NSString         *szPhoneNumber;
 
-/**
- *  Add link to ibuildapp.com to sharing messages
- */
-@property (nonatomic, strong) NSArray          *objContainer;
-
 @end
 
 @implementation mTapToCallViewController
@@ -48,19 +44,10 @@
   {
     self.szTitle      = nil;
     self.szPhoneNumber = nil;
-    self.objContainer = nil;
   }
   return self;
 }
 
-- (void)dealloc
-{
-  self.szTitle = nil;
-  self.szPhoneNumber = nil;
-  self.objContainer = nil;
-  
-  [super dealloc];
-}
 
 #pragma mark - 
 
@@ -115,6 +102,7 @@
 }
 
 /**
+ *  Crutch for supporting scenarios.
  *  This does not necessarily call module (i.e. adding viewController to stack may not happen).
  *  For example, if there is a call third-party application, the method returns a pointer to an object of type NSObject.
  *  Otherwise - the caller makes adding view controller in the stack.
@@ -125,15 +113,11 @@
 {
   if ( [self.szPhoneNumber length] )
   {
-    TPhoneCaller *caller = [[[TPhoneCaller alloc] init] autorelease];
-    [caller callNumber:self.szPhoneNumber];
+    [TPhoneCaller callNumber:self.szPhoneNumber];
     
     // We must return an object with type NOT ViewController!
     // otherwise it will be added to the stack of viewControllers, this will cause a crash!
-    
-    //  So we must hold self to NSArray and return it
-    self.objContainer = [NSArray arrayWithObject:self];
-    return self.objContainer;
+    return @[self];
   }
   
   return nil;
